@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">버튼</button>
+    <script>
+        // class가 btn인 것
+        const button = document.querySelector(".btn");
+
+        // 버튼을 누르면, 생기는 이벤트(함수 실행)
+        button.addEventListener("click",function(){ // 이벤트 핸들러(click + 콜백함수)
+            console.log("gogo");    // 콜백함수(이벤트에서의)
+        });  // 이벤트리스너
+        
+        
+    </script>
+</body>
+</html>

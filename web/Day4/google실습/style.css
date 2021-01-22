@@ -1,0 +1,164 @@
+/* #body-background {
+    background: #fff;
+
+} */
+
+/* 레이아웃 무너지면 사용 */
+/* * {
+    box-sizing: border-box;
+} */
+
+/* 헤더부분 */
+.header-nav {
+    display: flex;
+}
+
+.header-nav-list-wrapper {
+    list-style: none;
+    padding: 0;
+    display: flex;  /*가로정렬*/
+    margin-left: auto;  /*오른쪽으로 정렬/margin-right: auto (왼쪽 정렬)*/
+    align-items: center;
+}
+
+.header-nav-list-wrapper li{
+    margin-left: 10px;
+}
+
+.toggle-button {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    cursor: pointer; /*커서 모양 변경*/
+    background: black;
+    color: #fff;
+}
+
+/* 
+    inline: 요소를 가운데 정렬할 때, 
+        text-align: center 사용 (블록요소 해당 안됨)
+
+*/
+
+/* 메인 */
+.main-container {
+    text-align: center;     /* 자식 인라인 요소들 모두 가운데 정렬됨*/
+    
+    /* 가운데 정렬 */
+    position: absolute;     /*가장 가까운 부모 중, static이 아닌 위치를 기준, body*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-logo {
+    width: 272px;
+}
+
+/* 검색부분 */
+.search-container {
+    position: relative;
+    margin: 0 auto; /* 가운데 정렬 코드*/
+    margin-top: 50px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 17px;
+}
+
+#search-input {
+    height: 44px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #eeeeee;
+    padding-left: 40px;
+}
+
+.bookmark-section {
+    margin-top: 40px;
+}
+
+.bookmark-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    max-width: 600px;
+    min-width: 430px;
+}
+
+.bookmark_item {
+    margin-top:30px;
+    width:112px;
+    text-align: center;
+
+    /*가운데 정렬*/
+    display: flex;      
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    
+    text-decoration: none;
+}
+
+/* hover: 마우스를 가져다 */
+.bookmark_item:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#bookmark-plus {
+    margin-top: 30px;
+    width: 112px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.img-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f3f5;
+    font-size: 24px;
+
+}
+
+.img-icon-wrapper > img {
+    width:60%;
+    height: 60%;
+}
+
+.bookmark-text {
+    margin-top: 5px;
+    color: black;
+}
+
+/* 다크모드 */
+
+.toggle-button-darkmode {
+    background: #fff;
+    color: #000;
+}
+.body-background-darkmode {
+    background: #000;
+}
+.img-icon-wrapper-darkmode {
+    background: #fff;
+}
+.text-darkmode {
+    color: #fff;
+}
+
+/* 
+.body-background {
+    background: #fff;
+} */

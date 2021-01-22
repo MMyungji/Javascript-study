@@ -1,0 +1,32 @@
+<!--0118 실습1(풀이)-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, intial-scale=1.0'>
+        <title>회원가입</title>
+    </head>
+    <body>
+        <h2>회원가입 양식 만들기</h2>
+        <!-- form: 서버로 보내기 위한 제출용 목적-->
+        <form>
+            이름: <input type='text'/><br/>
+            아이디: <input type='text'/><br/>
+            비밀번호: <input type='password'/><br/>
+
+            <!-- value값은 서버로 전송되는 값-->
+            <input type='radio' name="성별" value="남" checked/> 남
+            <input type='radio' name="성별" value="여"/> 여
+
+            <br/>
+            취미: <select name = '취미'>
+                <option>영화보기</option>
+                <option selected>코딩하기</option>
+                <option>운동하기</option>
+            </select>
+
+            <br/>
+            <input type='submit' value="제출하기"/>
+        </form>
+    </body>
+</html>

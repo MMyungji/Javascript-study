@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: left;    /* 정렬배치 가운데 정렬*/
+            padding: 20px;
+            max-width: 40vh;    /* 반응형: viewport의 높이, vw는 viewport의 높이 */
+        }
+        input {
+            width: 150px;
+            height: 25px;
+            margin: 10px;
+            background: lightgray;
+        }
+        .check_wrapper span {
+            border: 1px solid black;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" class="id" placeholder="id"/>
+        <input type="password" class="password" placeholder="password"/>
+        <div class="check_wrapper">
+            <input type="password" class="password_check" placeholder="password check"/>
+            <span class="check_memo"></span>
+        </div>
+        <div>
+            <input type="checkbox" class="security_checkbox"> 개인정보 이용 동의
+        </div>
+        <button class="signup">회원가입</button>
+    </form>
+
+    <script>
+
+        const id = document.querySelector(".id");
+        const pw = document.querySelector(".password");
+        const pw_check = document.querySelector(".password_check");
+        const check_memo = document.querySelector(".check_memo");
+        const security_checkbox = document.querySelector(".security_checkbox");
+        const signup = document.querySelector(".signup");
+
+        console.dir(security_checkbox);
+        pw_check.addEventListener("keyup",function(e){
+            if (e.target.value === pw.textContent){
+                check_memo.textContent = "비밀번호가 일치합니다.";
+            }
+            else {
+                check_memo.textContent = "비밀번호가 다릅니다.";
+            }
+        });
+
+        signup.addEventListener("click", function(){
+            if(id.value && pw.value) {
+                if(!pw_check.value){
+                    alert("비밀번호 일치 확인해주세요!")
+                }
+                if(security_checkbox.target.checked === true){
+                    alert("회원가입이 완료되었습니다.")
+                }else {
+                    alert("개인 정보 이용 동의 해주세요.")
+                }
+                
+            } else {
+                if(!id.value){
+                    alert("아이디 입력해주세요!");
+                }
+                if(id.value && !pw.value){
+                    alert("비밀번호 입력해주세요!")
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

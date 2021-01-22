@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            background-color: brown;
+            position:static;
+            top: 10px;
+        }
+        .right {
+            background-color: burlywood;
+            /* relative: 상대적으로 어느정도 움직이고 싶을때(위치배정할때 사용됨) 
+            원래 있어야할 위치에서 이동. 현재좌표를 기준으로 위치 계산*/
+            position: relative;
+            top: 10px;
+            left: 50%;
+        }
+        .bottom {
+            /* absolute; 가장 가까운 부모요소 중 static이 아닌 요소를 기준으로 삼는다 */
+            /* 부모에게 relative를 보통 부여함. static이 아닌 요소를 기준으로 하기 때문! */
+            background-color: cadetblue;
+            position: absolute;
+            top: 20px;
+        }
+        .left {
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <span class="top">top</span>
+    <span class="right">right</span>
+    
+    <span class="bottom">bottom</span>
+    <div class="left">left</div>
+    <div>test</div>
+
+    <!-- 부모가 div임에도 기준을 body를 기준으로 삼음
+    왜냐, 부모요소 중 static이 아닌 요소를 기준으로 하기 때문 -->
+    <div>
+        <span class="bottom">test1</span>
+    </div>
+</body>
+</html>

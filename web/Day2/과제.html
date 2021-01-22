@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 로그인 페이지</title>
+    <style>
+        body {
+            background-color: #F5F6F7;
+        }
+        .select-language {
+            position: absolute;
+            right: 20%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 230px;
+            height: 44px;
+            top: 100px;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            margin: auto;
+        }
+        .box {
+            width: 460px;
+            height: 29px;
+            border: 1px solid lightgray;
+            padding: 7px 35px 10px 11px;
+            margin: 5px auto;
+        }
+        .login-button {
+            justify-content: center;
+            align-items: center;
+
+            width: 507px;
+            height: 55px;
+            background: #04CF5C;
+            border: 1px solid  #04CF5C;
+
+            font-size: 18px;
+            color: white;
+            margin: 5px auto;
+        }
+        .login-checkbox {
+            display: flex;
+            justify-content: space-between;
+            width: 507px;
+            margin: 10px auto;
+        }
+        span {
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+        }
+        .on {
+            right: 10px;
+            color: #04CF5C;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="select-language">
+        <select name="language">
+            <option value="한국어" selected>한국어</option>
+            <option value="english">english</option>
+            <option value="日本語">日本語</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="../img/logo.png" alt="로고 이미지" />
+        </div>
+        <div class="login-wrapper">
+            <div>
+                <input class="box" type="text" placeholder="아이디">
+            </div>
+            <div>
+                <input class="box" type="password" placeholder="비밀번호">
+            </div>
+            <div>
+                <input class="login-button" type="submit" value="로그인"> 
+            </div>
+        </div>
+        
+        <div class="login-checkbox">
+            <div>
+                <input type="checkbox" checked> 로그인 상태 유지
+            </div>
+            <div>
+                <span><strong>IP</strong>보안<strong class="on">ON</strong></span>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

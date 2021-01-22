@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>HI</div>
+
+    <script>
+        const div = document.querySelector("div");
+        // div.classList.add("test");
+        // div.classList.remove("test");
+
+        // 생성과 삭제를 동시에 toggle, 없으면 생성 / 있으면 삭제 
+        div.classList.toggle("test");
+        
+        const test = div.classList.contains("test");    //해당 클래스 있는지 확인
+        console.log(test);
+        
+        div.classList.replace("test","KFC");            //"test" 클래스를 "KFC"로 변경
+
+    </script>
+</body>
+</html>

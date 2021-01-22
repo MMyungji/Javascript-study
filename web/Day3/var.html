@@ -1,0 +1,68 @@
+<!-- 
+    var
+    1. 중복 선언 가능
+    2. 함수 레벨 스코프
+
+    let 
+    1. 중복 선언 불가능
+    2. 블록 레벨 스코프
+
+    const
+    1. 중복 선언 불가능
+    2. 블록 레벨 스코프
+    3. 재할당 불가능
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 같은 변수 명, 중복사용 가능
+        // var a = 10;
+        // console.log(a)
+        // var a = 110;
+        // console.log(a)
+
+        // var, 전역으로 적용 (function level scope)
+        // var x = 0;
+        // {
+        //     var x = 1;
+        //     console.log(x); // block level scope X
+        // }
+        // console.log(x); // 출력 결과는 1,1
+
+
+        // let a = 10;
+        // console.log(a)
+        // a = 110;    // let은 중복 선언 불가
+        // console.log(a)
+
+        // const b = 10;
+        // console.log(b)
+        // b = 20; //const 중복 선언 불가, 재할당 불가
+        // console.log(b)
+
+
+        let x = 0;
+        {
+            let x = 1;
+            console.log(x); // block level scope
+        }
+        console.log(x); // 결과 1 0
+
+        const y = 0;
+        {
+            const y = 1;
+            console.log(y); // block level scope
+        }
+        console.log(y); // 결과 1 0
+
+    </script>
+
+</body>
+</html>

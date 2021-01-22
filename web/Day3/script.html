@@ -1,0 +1,25 @@
+<!-- 
+    1. html,css 파싱: 병렬구조(트리구조), (병렬적으로 동시에 진행)[ DOM트리, CSSOM트리 ]
+    2. script 파싱: DOM트리 만들던 것을 멈춤, script 실행(우선순위 높음) 
+        >> head위치에 안넣음 >> defer 속성 또는 body태그 밑에
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- head태그에 script가 삽입되는 경우 
+        defer 속성! 사용!
+    -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="/Day3/hellloworld.js" defer></script>
+</head>
+<body>
+    <h1>test</h1>
+    <!-- body태그에 script가 삽입되는 경우 -->
+    <script>
+
+    </script>
+</body>
+</html>

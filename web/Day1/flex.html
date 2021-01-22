@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a-wrapper {
+            display: flex;
+
+            /* row(default) row-reverse column column-reverse */
+            /* flex-direction: column-reverse; */
+
+            /* 주축기준 정렬 center, space-*/
+            /* justify-content: space-between; */
+
+/* 가로축,세로축 모두 중앙 배치 */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            height: 500px;
+            background-color: khaki;
+
+        }
+        .box {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: plum;
+        }
+        .b-wrapper {
+            margin-top: 100px;
+            display: flex;
+            /* default:nowrap, wrap: 화면밖으로 넘어가면 줄바꿈 */
+            flex-wrap: wrap;
+        }
+        .box1 {
+            width: 800px;
+            height: 80px;
+            border: 1px solid black;
+            background-color: honeydew; 
+        }
+        .c-wrapper {
+            display: flex;
+            height: 400px;
+        }
+        .box2 {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: yellow; 
+        }
+        .boxa {
+            flex:1;
+            background-color: teal;
+        }
+        .boxb {
+            flex:3;
+            background-color: blueviolet;
+        }
+        .boxc {
+            flex:2;
+            background-color: sienna;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- flex를 사용하여 a,b,c를 가로로 정렬하기(원래는 한줄씩 배치됨) -->
+    <div class="a-wrapper">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+    </div>
+
+    <div class="b-wrapper">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+    </div>
+
+    <div class="c-wrapper">
+        <div class="box2 boxa">a</div>
+        <div class="box2 boxb">b</div>
+        <div class="box2 boxc">c</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>test</h1>
+    <!-- class: 여러개 사용, id: 식별을 위해 한개로 사용 >> 요즘 추세는 class -->
+    <a href="#">Link text</a>
+    <script>
+        const btn = document.createElement("button");
+        const txt = document.createTextNode("테스트");
+
+        btn.setAttribute("class","BTS");   // 동적 추가
+
+        btn.append(txt);    // 버튼에 글자 넣기
+        document.querySelector('body').append(btn); //body에 버튼넣기, 동적 추가
+    </script>
+</body>
+</html>

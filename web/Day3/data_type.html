@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        let b = String(a);
+        let c = Number(b);
+
+        console.log(a, typeof a);
+        console.log(b, typeof b);
+        console.log(c, typeof c);
+        console.log(typeof '10');   //string
+        console.log(typeof +'10');  //number
+
+        // 형변환이 자유롭다
+        console.log('10' + 1);  //101
+        console.log(Number('10') + 1);  //11
+        console.log(+'10' + 1);  //11
+
+        console.log(typeof (1+''));  // string
+
+        
+    </script>
+</body>
+</html>

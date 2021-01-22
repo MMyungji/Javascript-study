@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=bbq()>클릭시 랜덤 한 버튼이 나타납니다</button>
+    <button class="btn">랜덤한 값을 나타내 줍니다</button>
+    <script>
+        // Math.ceil(Math.random()*10) : 0부터 10까지 랜덤 수
+        console.log(Math.ceil(Math.random()*10))
+        function bbq() {
+            let number = Math.ceil(Math.random()*9) + 1;    //1부터 10까지 랜덤수
+            alert(number);
+        }
+
+        const button = document.querySelector(".btn");
+        button.addEventListener("click",bbq); 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Google</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+<body class="body-background">
+    <!-- 오른쪽 상단 바 -->
+    <header> 
+        <!-- nav: 버튼 바, li: 버튼 리스트 -->
+        <nav class="header-nav">
+            <ul class="header-nav-list-wrapper">
+                <li>Gmail</li>
+                <li>이미지</li>
+                <li><button class="toggle-button">다크모드</button></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 메인 -->
+    <main class="main-container">
+        <!-- h1태그는 로고, 홈페이지에서 한번만 사용 -->
+        <h1><img class="image-logo" src="./images/logo.png" alt="Logo Image"></h1>
+        <!-- 검색 엔진 바 -->
+        <div class="search-container">
+            <input id="search-input" placeholder="Google 검색 또는 URL 입력" />
+            <img class="search-icon" src="./images/search.png" alt="돋보기 이미지" />
+        </div>
+        <!-- 독립적으로 구분, 콘텐츠 O: article태그(별도로 존재)
+            독립적으로 구분 X, 콘텐츠X: section태그-->
+        <section class="bookmark-section">
+            <div class="bookmark-wrapper">
+                <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/ssafy.png" alt=""></div>
+                    <div class="bookmark-text">ssafy</div>
+                </a>
+                <a href="https://www.samsung.com/sec/galaxy-s21/preorder/" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/samsung.png" alt=""></div>
+                    <div class="bookmark-text">samsung</div>
+                </a>
+                <a href="https://www.naver.com/" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/naver.png" alt=""></div>
+                    <div class="bookmark-text">naver</div>
+                </a>
+                <a href="https://www.daum.net/" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/daum.png" alt=""></div>
+                    <div class="bookmark-text">daum</div>
+                </a>
+                <a href="https://www.google.com/" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/google.png" alt=""></div>
+                    <div class="bookmark-text">google</div>
+                </a>
+                <a href="https://www.zum.com/" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/zum.png" alt=""></div>
+                    <div class="bookmark-text">zums</div>
+                </a>
+                <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/ssafy.png" alt=""></div>
+                    <div class="bookmark-text">ssafy</div>
+                </a>
+                <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/ssafy.png" alt=""></div>
+                    <div class="bookmark-text">ssafy</div>
+                </a>
+                <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank" class="bookmark_item">
+                    <div class="img-icon-wrapper"><img src="./images/ssafy.png" alt=""></div>
+                    <div class="bookmark-text">ssafy</div>
+                </a>
+
+                <div id="bookmark-plus">
+                    <div class="img-icon-wrapper">
+                        +
+                    </div>
+                    <div class="bookmark-text">추가하기</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

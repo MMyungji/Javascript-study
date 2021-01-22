@@ -1,0 +1,41 @@
+<!-- 
+    1. 자동 줄바꿈(요소마다 줄바꿈이 들어간다. 한줄 차지)
+    2. 넓이 값 미 지정시, 부모 요소 넓이값을 100% 상속받음
+    3. 넓이& 높이 지정 가능, margin&padding요소 적용 가능
+    4. 블록요소 태그는 블록요소와 인라인요소 모두 감쌀 수 있음
+    5. 단 p&h1 시리즈 태그는 서식관련된 요소 >> 내부에 div나 여타 블록요소를 자식으로 넣을 수 없음
+
+    div,p,h1 태그 등
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         * {
+            border:1px solid black
+         }
+         div {
+             width: 140px;
+             height: 150px;
+         }
+     </style>
+ </head>
+ <body>
+     <div>div 태그입니다</div>
+     <p>p태그 입니다</p>
+     <h2>h2태그 입니다.</h2>
+
+     <span><div></div></span>
+
+     <div>
+         <div>
+
+         </div>
+     </div>
+
+ </body>
+ </html>

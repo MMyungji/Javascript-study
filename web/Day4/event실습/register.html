@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    /* 정렬배치 가운데 정렬*/
+            padding: 20px;
+            max-width: 40vh;    /* 반응형: viewport의 높이, vw는 viewport의 높이 */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" class="id" placeholder="아이디"/>
+        <input type="password" class="password" placeholder="비밀번호"/>
+        <button class="signup">회원가입</button>
+<!-- input type button 차이는 기능상 없음-->
+<!-- button 태그 스타일 적용 가능 -->
+    </form>
+    <script>
+
+        const id = document.querySelector(".id");
+        const pw = document.querySelector(".password");
+        const signup = document.querySelector(".signup");
+
+        signup.addEventListener("click", function(){
+            if(id.value && pw.value) {
+                alert("회원가입이 완료되었습니다.")
+            } else {
+                if(!id.value){
+                    alert("아이디 입력해주세요!");
+                }
+                if(id.value && !pw.value){
+                    alert("비밀번호 입력해주세요!")
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

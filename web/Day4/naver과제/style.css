@@ -1,0 +1,103 @@
+/* 헤더부분 */
+.header-nav {
+    display: flex;
+}
+
+.menu-image {
+    padding: 0;
+    margin: 10px 25px;
+    margin-right: auto;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.login-image {
+    padding: 0;
+    margin: 10px 25px;
+    margin-left: auto;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+/* 메인 */
+.main-container {
+    text-align: center;     
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.image-logo {
+    width: 217px;
+    margin-top: 38px;
+}
+
+/* 검색부분 */
+.search-container {
+    position: relative;
+    width: 600px;
+    margin: 0 auto; 
+}
+
+.search-input {
+    /* position: absolute; */
+    height: 53px;
+    width: 560px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1.2px solid #04cf81;
+    font-size: 16px;
+}
+
+.bookmark-section {
+    margin-top: 30px;
+    margin: auto;
+}
+
+.bookmark-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    max-width: 450px;
+    min-width: 176px;
+}
+
+.bookmark_item {
+    margin-top: 30px;
+    width:112px;
+    text-align: center;
+    display: flex;      
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    text-decoration: none;
+}
+
+.bookmark_item:hover {
+    cursor: pointer;
+}
+
+.img-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f3f5;
+    font-size: 24px;
+
+}
+
+.img-icon-wrapper > img {
+    width: 50%;
+    height: 50%;
+}
+
+.bookmark-text {
+    margin-top: 5px;
+    color: gray;
+    font-size: 13px;
+}

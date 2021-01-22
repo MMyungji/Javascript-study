@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const body = document.querySelector("body");
+
+        // 버튼 5개 동적으로 생성하기
+        for(let i =1;i<=5;i++) {
+            const button = document.createElement("button");
+            button.innerText = "버튼"+i;
+            button.setAttribute("class", "btn"+i);
+            body.append(button);
+        }
+
+        // 동작하는 부분
+        // 이벤트 하나로 refactoring
+        body.addEventListener("click",function(e){
+            // console.dir(e.target);
+            if(e.target.nodeName === "BUTTON") {    // 이벤트 타겟 이름이 버튼이면 실행
+                // alert(e.target.innerText + " 클릭!");    //불필요한 공백을 제거하고 텍스트로 반환
+                alert(e.target.textContent + " 클릭!");     //모든 텍스트를 그대로 가져옴(공백 포함)
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수 hosting
+        // var x;를 15번 코드에서 선언되었지만, 11번에서 실행(끌어 올려짐)
+        // 선언문에 런타임이전에 실행되기 때문
+        console.log(x); //undefined, var x; 가 먼저 실행되어 x에 대한 공간이 이미 존재 >> undefined 출력(null 의미)
+
+        var x = 1;
+
+        y = 1;
+        console.log(y) // 1 출력
+        var y;
+        
+    </script>
+
+</body>
+</html>

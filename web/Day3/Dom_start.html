@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My title</title>
+
+</head>
+<body>
+    <h1>A haeding</h1>
+    <a href="mcdonalds.co.kr">Link text</a>
+</body>
+
+<script>
+    // const node = document.children[0].children[1].children[0].textContent;
+    // console.log(node);   //A haeding
+
+    const a = document.children[0].children[1].children[1];
+    console.log(a); //Link text
+    console.dir(a); //객체타입, 안의 속성을 확인
+    
+    a.textContent = 'BBQ';  //동적 변화, 값 변경
+</script>
+</html>

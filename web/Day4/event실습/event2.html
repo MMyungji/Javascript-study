@@ -1,0 +1,44 @@
+<!-- 
+    이벤트 위임: 부모에게 이벤트 몰아주기
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 3px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">
+        <span>1</span>
+        <div class="item2">
+            <span>2</span>
+            <div class="item3">
+                <button>3</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 이벤트 위임: 부모에게 이벤트 몰아주기
+        // 중복되던 이벤트가 한번으로 줄어듬!
+        const body = document.querySelector("body");
+        body.addEventListener("click",function(e){
+            // console.log(e.target);  //이벤트(클릭)가 발생하면 그 발생한 시점/태그(target)
+            // console.log(e.target.nodeName); //태그이름이 대문자로 출력, DIV
+            if (e.target.nodeName === "DIV") {
+                console.log("클릭");
+                console.dir(e.target);
+            }
+            // 할 작업
+        });
+
+
+    </script>
+</body>
+</html>

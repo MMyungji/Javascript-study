@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 버튼 5개 동적으로 생성하기
+        const body = document.querySelector("body");
+        for(let i =1;i<=5;i++) {
+            const button = document.createElement("button");
+            button.innerText = "버튼"+i;
+            button.setAttribute("class", "btn"+i);
+            body.append(button);
+        }
+        
+        //버튼인 요소 모두 가져오기, 배열로 저장됨
+        const buttons = document.querySelectorAll("button");
+        for (let i=0;i<buttons.length;i++) {
+            buttons[i].addEventListener('click', function() {
+                alert("안녕"+buttons[i].textContent);
+            });
+        }
+    </script>
+    
+</body>
+</html>

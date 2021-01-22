@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt('숫자 a 입력');
+        let b = prompt('숫자 b 입력');
+        if (a>=b){
+            for(let i=a;i>=b;i--){
+                console.log(i)
+            }
+        }else {
+            for(let i=a;i<=b;i++){
+                console.log(i)
+            }
+        }
+
+
+        let ckichen = prompt('치킨 브랜드');
+        let result = 0;
+        if(ckichen === 'BBQ'){
+            for(let i=1;i<=30;i++){
+                result+=i;
+            }
+            console.log(result)
+        }else if (ckichen === 'KFC'){
+            for(let i=1;i<=30;i++){
+                if (i%2 === 1) {
+                    result+=i;
+                }
+            }
+            console.log(result)
+        }else {
+            console.log('MOMS')
+        }
+
+
+        let n1 = prompt();
+        let n2 = prompt();
+        let n3 = prompt();
+        if(n1 >= n2 && n1 >=n2) {console.log("A짱");}
+        else if(n2>=n1 && n2>=n3) {console.log("B짱");}
+        else {console.log("C짱");}
+
+    </script>
+</body>
+</html>

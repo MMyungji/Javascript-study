@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button class = "btn-toggle">토글</button>
+    <button class = "btn-add">클래스 생성</button>
+    <button class = "btn-remove">클래스 제거</button>
+
+    <script>
+        const btnToggle = document.querySelector(".btn-toggle");
+        btnToggle.addEventListener("click", function(){
+            // body태그안에 bg-yellow클래스 생성 및 삭제 이벤트
+            document.querySelector("body").classList.toggle("bg-yellow")
+        });
+
+        const btnAdd = document.querySelector(".btn-add");
+        btnAdd.addEventListener("click", function(){
+            // body태그안에 bg-yellow클래스 생성 이벤트
+            document.querySelector("body").classList.add("bg-yellow")
+        });
+
+        const btnRemove = document.querySelector(".btn-remove");
+        btnRemove.addEventListener("click", function(){
+            // body태그안에 bg-yellow클래스 삭제 이벤트
+            document.querySelector("body").classList.remove("bg-yellow")
+        });
+
+    </script>
+</body>
+</html>
