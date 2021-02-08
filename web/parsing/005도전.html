@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = "KFCOCOBBQMINMINC";
+        // C가 처음 발견되는 index
+        g1 = a.indexOf("C");
+        console.log(`첫번째: ${g1}`);
+
+        // C가 존재하는 모든 index
+        let result = [];
+        for(let i=0;i<a.length;i++){
+            if (a[i] === "C"){
+                result.push(i)
+            }
+        }
+        console.log(`C: ${result}`)
+
+        // 해답
+        let res = -1;
+        let arr = [];
+        while(1){
+            res = a.indexOf("C",res+1);
+            if (res===-1) break;
+            arr.push(res);
+        }
+
+        console.log(arr);
+        console.log(...arr); // 배열을 풀어서 출력하는 방법 {...배열}
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "AB[100]T[41]ABC[1][5]BTS";
+
+        let a;
+        let b = -1;
+        let sum = 0;
+
+        while(1){
+            a = str.indexOf('[',b+1);
+            if(a===-1)break;
+            b=str.indexOf(']',a+1);
+            if(b===-1)break;
+            let num = str.substring(a+1,b);
+            sum+=Number(num)
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

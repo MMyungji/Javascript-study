@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("문자열 입력해주세요");
+        let b = prompt("문자열 입력해주세요");
+        let c = prompt("문자열 입력해주세요");
+
+        let a2 = a.split(" ");
+        let b2 = b.split(" ");
+        let c2 = c.split(" ");
+
+        let res_a = [];
+        let res_b = [];
+        let res_c = [];
+
+        
+        
+        let result = 0;
+
+        if (res_a === res_b && res_b === res_c){
+            alert("Very Good");
+        }else if (res_a === res_b || res_b === res_c || res_c === res_a){
+            alert("Two");
+        }else{
+            alert("Only one");
+        }
+    </script>
+</body>
+</html>

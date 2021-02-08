@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 생성자 함수 - 생성자 함수 내부에 constructor 존재
+        class Person {
+            // constructor
+            constructor(){
+                this.age = 40;
+            }
+            think(){
+                console.log("I am a person");
+            }
+        }
+        // 인스턴스
+        let p = new Person();
+        console.log(p.age);
+        p.think();
+
+    </script>
+</body>
+</html>

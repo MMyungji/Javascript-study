@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hamberger-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .hamburger-wrapper{
+            max-width: 300px;
+            min-height: 300px;
+
+            border:1px solid black;
+            padding: 10px;
+
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        .hamburger {
+            margin: 5px;
+            perspective: 1000px;
+            width: 50px;
+            height: 50px;
+            background: url(../img/hamburger.jpeg);
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hamberger-container"></div>
+    <script>
+        /**
+         * prototype chain *
+         * 
+         * (부모) << 생성자 함수, 인스턴스 prototype, 인스턴스 >> (자식)
+         * 자식은 부모에게 상속받음
+        >> 인스턴스는 인스턴스 prototype의 함수를 사용할 수 있다. 상속받았기 때문
+         **/
+
+
+        // 생성사 함수 - name, count
+        // init()함수를 생성자에서 호출
+        function HamburgerCount(name,count){
+            this.name = name;
+            this.count = count;
+
+            // 
+            this.init();
+        }
+
+        // 인스턴스 prototype
+        // init, eat
+        HamburgerCount.prototype = {
+            // 객체임으로 :(콜론)으로 구분함
+            constructor:HamburgerCount,
+
+            // init함수
+            init: function() {
+                // css 동적할당
+                const hamburgerWrapper = document.createElement("div");
+                hamburgerWrapper.classList.add("hamburger-wrapper");
+
+                // 인스턴스에 받아온 count개수만큼 햄버거 생성
+                for(let i=0;i<this.count;i++){
+                    const hamburger = document.createElement("div");
+                    hamburger.classList.add("hamburger");
+                    hamburgerWrapper.appendChild(hamburger);
+                }
+                document.querySelector(".hamberger-container").appendChild(hamburgerWrapper);
+            },
+            // eat 함수
+            eat: function(){
+                console.log(`${this.name}는 햄버거를 ${this.count}개 먹습니다.`);
+            }
+        }
+
+        // 인스턴스 생성 - new 키워드
+        // 인스턴스 값 = 이온유, 25
+        const person1 = new HamburgerCount("이온유",25);
+
+        person1.eat();
+    </script>
+</body>
+</html>

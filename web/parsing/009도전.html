@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "ABCDEF[1599]AAQ";
+
+        let a = str.indexOf("[");
+        let b = str.indexOf("]", a); //두번째 인자에는 해당 인덱스 이후로 찾기 > 시간절약
+
+        let result = str.substring(a+1,b);
+        let num = Number(result)+1;
+
+        console.log(num);
+    </script>
+</body>
+</html>

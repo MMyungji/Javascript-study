@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        indexOf("문자열", 시작할 index)
+        1. 대소문자 구분 필요
+        2. 처음으로 나오는 인덱스 출력
+        3. 못찾는 경우 -1 return
+    -->
+    <script>
+        let a = "HelloWorldHello"
+
+        let g1 = a.indexOf("Hello");
+        let g2 = a.indexOf("Hello", 6);
+
+        // alert(g1,g2);
+        console.log("g1=",g1," g2=",g2);
+
+        // Template literals  템플릿 리터럴 기법
+        // 백틱이용 ` ` 
+        console.log(`g1 = ${g1}, g2 = ${g2}`);
+
+        // substr(시작 index, 글자수) - 특정 index부터 글자 수 만큼 문자열 얻는 매서드
+        // substring(시작 index, 끝 index) - 특정 index부터 끝 index 전까지 문자열 얻는 매서드
+    </script>
+</body>
+</html>
