@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Hero{
+            constructor(){
+                this.HP = 100;
+            }
+            showHP(){
+                console.log(`HP: ${this.HP}`);
+            }
+            run(){
+                this.HP-=10;
+            }
+        }
+
+        let batman = new Hero();
+        
+        batman.showHP();
+        batman.run();
+        batman.run();
+        batman.showHP();
+    </script>
+</body>
+</html>
