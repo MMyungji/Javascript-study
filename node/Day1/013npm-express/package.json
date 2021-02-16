@@ -1,0 +1,14 @@
+{
+  "name": "013npm-express",
+  "version": "1.0.0",
+  "description": "express를 활용한 서버구축",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MJ Jeong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
