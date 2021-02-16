@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log("손님 입장");
+        console.log("손님 주문 고민");
+
+        const pro = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("손님 주문 결정");
+                resolve(); // 성공한 경우, Good출력
+                // reject();  // 실패한 경우. Bad출력
+            },1000);
+        });
+
+        console.log("알바생 서빙중~");
+
+        // 콜백지옥에서 벗어남
+        pro
+            .then(() => {
+                console.log("Good"); // 성공한 경우
+            })
+            .catch(() => {
+                console.log("Bad"); // 실패한 경우
+            });
+
+
+    </script>
+</body>
+</html>

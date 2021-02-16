@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 해당조건을 만족하는 첫번째 값 반환
+        const array = [1,2,3,4,5];
+        array.find((e)=>e>4);       // 5, 요소 값 반환
+        array.find((e)=>e>5)        // undefined, 없는 경우
+
+        array.findIndex(e => e>4); // 4, 인덱스 값 반환
+        array.findIndex(e => e>5); // -1, 없는 경우
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        map = 여러개 (반환값)
+        filter = 여러개일수도 1개일수도 있음
+        reduce = 하나의 값만 반환, reduce(결과값, 현재값), 현재값이 없을 때(요소의 끝) 결과값 반환
+        reduce((acc,cur))=>(함수몸체),acc의 초기값)
+    -->
+    <script>
+        const arr = [1,2,3,4,5];
+        const sum = arr.reduce((acc,cur)=>acc+cur);
+        console.log(sum); // 15
+    </script>
+</body>
+</html>

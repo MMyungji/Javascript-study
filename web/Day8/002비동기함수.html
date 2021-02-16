@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log('hello world');
+        }
+        setTimeout(hello,2000) // (콜백함수, 지연시간)
+
+        // 함수가 여기서만 사용되면
+        setTimeout(()=>{
+            console.log('hello world');
+        },1000); 
+
+        // 위의 두 함수는 동일하게 작용됨
+    </script>
+</body>
+</html>

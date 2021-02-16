@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // some, every - 콜백함수, array의 원소개수만큼 콜백함수 호출
+        const arr = [1,2,3,4,5,6];
+        
+        arr.some((e) => e>4); // true, 하나의 조건만 충족되도 true
+        arr.some((e) => e<0); // false
+
+        arr.every((e) => e>0); //true, 모든 원소가 조건을 충족해야 true
+        arr.every((e) => e>5); //false
+
+    </script>
+</body>
+</html>

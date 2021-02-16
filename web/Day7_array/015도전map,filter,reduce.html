@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * output와 input 개수 같을 때, map
+         * output와 input 개수 다를 때, reduce, filter
+         * output이 1개일때, 우선순위 reduce > filter
+         * output이 여러개인 경우, filter
+         * 
+         * map - input받는만큼 배열만들어서 return 
+         * filter - 여러개 또는 1개 return
+         * reduce - return 1개만
+         * **/
+        const arr1 = [1,2,3,4,5,6,7,8,9,10];
+
+        const res1 = arr1.filter(e=>e%2===0).map(e=>e*10);
+        console.log(...res1);
+
+        const res2 = arr1.reduce((acc,cur)=>{
+            if(cur%2===0) acc.push(cur*10);
+            return acc;
+        },[])
+        console.log(...res2);
+    </script>
+</body>
+</html>

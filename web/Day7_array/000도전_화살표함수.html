@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Arrow function 항상 무명이다. -->
+    <script>
+        const go = (n) => {     // 변수 호이스팅 발생
+            return n*n;
+        }
+
+        function go4(x){        // 함수 호이스팅 발생
+            return x*x;
+        }
+
+        // 함수의 인수가 1개인 경우 소괄호 생략 가능
+        const go2 = x => {
+            return x*x;
+        }
+
+        // 중괄호에 다른코드없이 return만 하는 함수는 중괄호와 return 생략가능
+        // 한줄만 수행하는 함수도 {}ㅑ생략 가능
+        const go3 = x => x*x;
+
+        console.log(go3(3));
+        console.log(go3(10));
+
+    </script>
+</body>
+</html>

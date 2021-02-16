@@ -8,11 +8,14 @@
 </head>
 <body>
     <script>
-        let go = (n) => {
-            console.log(n*n);
+        async function test(){
+            return await setTimeout(() => { // 1
+                return "싸피";
+            }, 1000);
         }
-        go(3);
-        go(10);
+        test().then((res) => {
+            console.log(res);
+        })
     </script>
 </body>
 </html>
