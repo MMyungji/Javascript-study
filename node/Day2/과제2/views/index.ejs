@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="h5 text-white text-decoration-none" href="#">
+                My Album List
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="d-flex flex-wrap justify-content-center mt-5">
+        <% data.forEach(li=> { %>
+            <div class="card-wrapper card bg-light m-5">
+                <div class="card-header text-white bg-primary d-flex flex-column justify-content-center align-items-center"
+                    style="min-height: 70px; min-width: 300px">
+                    <%=li.id %>
+                </div>
+                <div class="card-body">
+                    <p class="card-text-body card-text card-text-hidden">
+                        <%=li.title %>
+                    </p>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+
+</body>
+
+</html>
