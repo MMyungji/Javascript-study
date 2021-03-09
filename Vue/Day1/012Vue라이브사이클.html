@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                message:"메세지"
+            },
+            methods:{
+                
+            },
+
+            // 가장먼저 실행되는 라이프 사이클
+            // 컴포넌트가 DOM에 추가되기 전
+            // 데이터 접근 불가
+            beforeCreate() {
+                console.log("beforeCreate",this.message) //undefined
+            },
+
+            // 데이터나 computed, methods에 접근이 가능하나 DOM에 추가되지 않음
+            created() {
+                console.log("created",this.message) // 메세지
+            },
+
+            // '가상'돔은 생성되었으나 실제DOM은 없는 상태
+            beforeMount(){
+                console.log("beforeMount")
+            },
+
+            // 가장 많이 사용 '가상'DOM이 실제 DOM에 부착되고 실행
+            // axios등 통신 호출은 최소 mounted 이후 사용
+            mounted() {
+                console.log("mounted")
+            },
+
+            // data가 변해서 변화를 적용시키기 '바로' 전에 호출됨
+            beforeUpdate() {
+                console.log("beforeUpdate");
+            },
+
+            // data가 변경되서, DOM에까지 적용된 상태 => 값이 변경되어 호출되는 함수
+            // 값에 직접 접근할 때, 사용됩니다.
+            // 주의할 점, 여기서 data를 변경시키면 무한루프가 발생할 수 있음 => 값이 변경될 때 호출되는 함수이기 때문
+            updated() {
+                console.log("updated");
+            },
+
+            // 인스턴스가 해체되기 직전
+            // 이때, 이벤트 리스너 등을 해체
+            beforeDestroy() {
+                console.log("beforeDestroy")
+            },
+
+            // 해체가 끝난 이후, 인스턴스 속성에 접근 불가
+            destroyed() {
+                console.log("destroyed")
+            }
+        });
+    </script>
+</body>
+</html>

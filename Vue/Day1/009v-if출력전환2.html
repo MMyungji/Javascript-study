@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="seen1">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </div>
+        <div v-else-if="seen2">
+            <div>e</div>
+            <div>f</div>
+        </div>
+        <div v-else="seen3">
+            <div>g</div>
+            <div>h</div>
+        </div>
+        {{count}}
+        <button v-on:click="status">Go</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                seen1:true,
+                seen2:false,
+                seen3:false,
+                count:0
+            },
+            methods:{
+                status(){
+                    if (this.count%3===0) {
+                        this.seen1=false;
+                        this.seen2=true;
+                        this.seen3=false;
+                        this.count++;
+                    }
+                    else if (this.count%3===1) {
+                        this.seen1=false;
+                        this.seen2=false;
+                        this.seen3=true;
+                        this.count++;
+                    }
+                    else {
+                        this.seen1=true;
+                        this.seen2=false;
+                        this.seen3=false;
+                        this.count=0;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

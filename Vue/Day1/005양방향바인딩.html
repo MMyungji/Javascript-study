@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        - 단방향 바인딩: "v-bind" input태그의 값이 바뀌어도 text태그 변하지 않음
+        - 양방향 바인딩: "v-model" input태그의 값이 바뀌면 text태그 변함, 데이터 가져오기 편함
+    -->
+
+    <div id="app">
+        {{message}}
+        <p>
+            v-bind 단방향 바인딩
+            <input v-bind:value="message"/>
+        </p>
+        <p>
+            v-model 양방향 바인딩
+            <input v-model:value="message"/>
+        </p>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                message:"메세지를 입력하세요"
+            }
+        });
+    </script>
+</body>
+</html>

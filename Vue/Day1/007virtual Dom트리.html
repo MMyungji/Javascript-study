@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- MVVM패턴, 디자인패턴의 종류 - View <-> view Model -> Model : 데이터가 바뀔때마다 뷰가 바뀐다 -->
+    <!-- 디자인패턴: *{MVC}, MVP, MVVM -->
+    <script>
+        const h1 = document.createElement("h1");
+        document.body.append(h1);
+
+        let viewModel = {};
+        let model = "";
+        // view Model -> Vue.js는 이부분을 쉽게 구현할 수 있다.
+        Object.defineProperty(viewModel,"model",{
+            get() {
+                return model;
+            },
+            set(value) {
+                model = value;
+                h1.innerHTML = model;
+            }
+        });
+        
+        viewModel.model="e";
+        // viewModel.model = "abc"
+
+    </script>
+</body>
+</html>
+
+<!-- 
+    태크 만들고 넣기
+    const h1 = document.createElement("h1");
+    document.body.append(h1);
+
+    함수호출
+    let viewModel = {};
+    let model = "";
+    Object.defineProperties(viewModel,"model",{
+        get() {
+            return model;
+        },
+        set(value) {
+            model = value;
+            h1.innerHTML = model;
+        }
+    });
+ -->

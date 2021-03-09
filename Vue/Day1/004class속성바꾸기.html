@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bbq{color:brown;}
+        .kfc{color: red;}
+        #app {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- bbq:!attachKfc, kfc:attachKfc : attachKfc가 false면 bbq, true면 kfc적용 -->
+        <!-- "{}"": 클래스 객체 선언 -->
+        <h1 class="bbq" v-on:click="status" v-bind:class="{bbq:!attachKfc, kfc:attachKfc}">HI</h1>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                attachKfc: false
+            },
+            methods: {
+                status(){
+                    this.attachKfc = !this.attachKfc;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

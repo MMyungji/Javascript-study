@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- data 변화 -->
+        <textarea>{{message}}</textarea>
+        <button v-on:click="changeMessage">click</button>
+    </div>
+    
+    <!-- Vue 개발 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            // el: element엘리먼트
+            el: '#app',
+            data: {
+                message: "클릭을 눌러주세요",
+                nextMessage: "하하"
+            },
+            methods:{
+                // 함수
+                changeMessage(){
+                    this.message=this.nextMessage;
+                    // this.message="하하";
+                }
+            }
+        })
+    </script>
+</body>
+</html>

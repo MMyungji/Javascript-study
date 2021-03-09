@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>끝말잇기 게임</h2>
+        <div>{{str1}}</div>
+        <input v-model="str2" type="text">
+        <button @click="gameStart">입력</button>
+        <div>{{result}}</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                str1:"유상무",
+                str2:"",
+                result:""
+            },
+            methods:{
+                gameStart() {
+                    // console.log(this.str1[this.str1.length-1])
+                    // console.log(this.str2[0])
+                    if(this.str1[this.str1.length-1] === this.str2[0]){
+                        this.result = "정답!";
+                    }
+                    else{
+                        this.result = "땡!!!!";
+                    }
+                    this.str1 = this.str2;
+                    this.str2 = "";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <!-- 클릭시 함수 작용 -->
+        <button v-on:click="changeMessage">click</button>
+    </div>
+
+    <!-- Vue 개발 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            // el: element엘리먼트
+            el: '#app',
+            data: {
+                message: "Hello World",
+                nextMessage: "Hello Vue!"
+            },
+
+            // node에서 동작하는 코드-data
+            // data() {
+            //     return{
+            //         message: "Hello World"
+            //     }
+                
+            // }
+
+            methods:{
+                // 함수
+                changeMessage(){
+                    console.log(this.message);
+                    console.log(this.nextMessage);
+
+                    // Hello World -> Hello Vue!
+                    this.message=this.nextMessage;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

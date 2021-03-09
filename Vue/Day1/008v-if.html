@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 조건문 -->
+        <p v-if="seen">내가 보일까요?</p>
+        <p v-else-if="data">나나나나나</p>
+        <p v-else="seen">메롱</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                // seen: true
+                seen: false,
+                data: true
+            },
+            methods:{
+                
+            }
+        });
+    </script>
+</body>
+</html>

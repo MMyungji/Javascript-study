@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- data가 구분이 된다. -->
+        <word-relay :start-word="a"></word-relay>
+        <word-relay :start-word="b"></word-relay>
+        <word-relay :start-word="c"></word-relay>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        Vue.component("word-relay", {
+            template: `
+            <div>
+                <h2>끝말잇기 게임</h2>
+                <div>{{word}}</div>
+            
+                <form @submit.prevent="onSubmitForm">
+                
+                    <input type="text" v-model="value" ref="answer">
+                    <button type="submit">입력</button>
+                </form>
+                <div>{{result}}</div>
+            </div>
+            `,
+
+            // *start-word <-> startWord 로 자동으로 변환
+            props:["start-word"],
+            // data:{
+            //     word: "대파",
+            //     result: "",
+            //     value: ""
+            // },
+            // data를 활용할때, 함수가 호출할 때마다 만들어지는 객체가 리턴되어 다른객체가 생성된다.
+            // data가 구분이 된다.
+            data() {
+                return{
+                    word: this.startWord, //*작동됨
+                    result: "",
+                    value: ""
+                }
+            },
+            methods: {
+                onSubmitForm(e) {
+                    if (this.word[this.word.length - 1] === this.value[0]) {
+                        this.result = "정답";
+                        this.word = this.value;
+                    }
+                    else {
+                        this.result = "땡";
+                    }
+                    this.value = "";
+
+                    this.$refs.answer.focus(); 
+                }
+            }
+        })
+        const app = new Vue({
+            el: '#app',
+            data(){
+                return{
+                    a:"초밥",
+                    b:"삼겹살",
+                    c:"마카롱"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

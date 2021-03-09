@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li v-for="todo in todos" v-if="todo.done">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                todos:[
+                    {id:1, text:'밥먹기', done:false},
+                    {id:2, text:'치킨먹기', done:true},
+                    {id:3, text:'마라탕먹기', done:true},
+                    {id:4, text:'마카롱먹기', done:false},
+                    {id:5, text:'그릇치우기', done:true},
+                    {id:6, text:'커피마시기', done:true},
+                ]
+            },
+            methods:{
+                
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        - 데이터 따로, view 따로
+        - 예를 들어, axios로 데이터를 가져오면 그 데이터를 innerHTML이나 다른 메서드를 통해 값을 변경해주어야 한다.
+        - Vue는 동시에 편하게 사용할 수 있다.
+    -->
+    <div id="app">
+        <div>{{first}} 곱하기 {{second}} 는?</div>
+        <form @submit.prevent = "onSubmitForm">
+            <input type="text" v-model="value" red="answer">
+            <button type="submit">입력</button>
+        </form>
+        <div>{{result}}</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                first:Math.ceil(Math.random()*9),
+                second:Math.ceil(Math.random()*9),
+                value:"",
+                result:""
+            },
+            methods:{
+                onSubmitForm(){
+                    // 비구조할당
+                    // 비구조할당으로 가져온 변수는 값을 가져올 때만 사용 가능
+                    // 값을 변경할 땐, 적용되지 않는다.!!
+                    const {first,second,value} = this;
+
+                    if(first*second === parseInt(value)){
+                        this.result = "정답";
+                        this.first = Math.ceil(Math.random()*9);
+                        this.second = Math.ceil(Math.random()*9);
+                    }else{
+                        this.result = "땡!";
+                    }
+                    this.value = "";
+
+
+                    // 프로그래밍적으로 부모요소에서 자식 요소 내부의 input 요소에 focus를 부여하고 싶은 경우를 생각해 봅시다. 
+                    // 이 경우 <base-input> 컴포넌트에서도 ref를 사용함으로써 특정 요소에 접근할 수 있습니다. 
+                    this.$refs.answer.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>끝말잇기 게임</h2>
+        <div>{{word}}</div>
+        <!-- <form @submit="onSumnitForm"> -->
+        <form @submit.prevent="onSubmitForm">
+            <!-- ref속성사용하여 Dom에 직접 접근 -->
+            <input type="text" v-model="value" ref="answer">
+            <button type="submit">입력</button>
+        </form>
+        <div>{{result}}</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                word:"대파",
+                result:"",
+                value:""
+            },
+            methods:{
+                onSubmitForm(e){
+                    // e.preventDefault(); // 이벤트 객체를 통해, 사전 기본 기능 동작을 막아준다.
+                    if(this.word[this.word.length-1] === this.value[0]){
+                        this.result="정답";
+                        this.word = this.value;
+                    }
+                    else{
+                        this.result="땡";
+                    }
+                    this.value = "";
+
+                    // Dom에 직접적으로 접근하여 제어
+                    // Vue에서도 예외적으로 DOM을 직접 제어해야할 경우 생김
+                    // ref라는 속성을 사용함
+                    console.log(this.$refs);
+                    this.$refs.answer.focus(); // 접근하여 focus를 주는 속성, 
+                }
+            }
+        });
+    </script>
+</body>
+</html>
