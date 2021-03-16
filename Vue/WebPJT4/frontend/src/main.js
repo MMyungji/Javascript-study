@@ -3,10 +3,15 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// 메뉴바 속성 추가
+// element ui import
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+
+// 다국어지원 -> 한국어 설정
+import locale from 'element-ui/lib/locale/lang/ko';
+
+Vue.use(ElementUI,{locale});
+
 
 Vue.config.productionTip = false
 

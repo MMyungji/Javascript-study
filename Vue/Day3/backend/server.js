@@ -5,6 +5,10 @@ const app = express();
 const morgan = require('morgan');
 const PORT = 8000;
 
+// cors에러 방지(*중요*)
+const cors = require('cors');
+app.use(cors())
+
 // 둘이 같은 코드 -> 라우트 생성
 // const routes = require("./routes/index");
 const routes = require("./routes");

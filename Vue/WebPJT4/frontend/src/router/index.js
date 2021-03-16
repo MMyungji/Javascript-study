@@ -1,28 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
-import Post from '../views/Post.vue'
-import Room from '../views/Room.vue'
 
-import app from '../App.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Main',
     component: Main
-  },
-  {
-    path: '/room',
-    name: 'Room',
-    component: Room
-  },
-  {
-    path: '/post',
-    name: 'Post',
-    component: Post
   }
+  
 ]
 
 const router = new VueRouter({
